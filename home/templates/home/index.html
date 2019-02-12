@@ -6,7 +6,11 @@
 <div class="flex">
     {% for item in items %}
     <div class="card">
-        <img height="200" class="card-img-top" src="{{ item.image.url }}" alt="Card image cap">
+        {% if item.image.url != Null %}
+        <img style="border-bottom: solid 1px rgb(44, 43, 43);" height="200" class="card-img-top" src="{{ item.image.url }}">
+        {% else %}
+        <img style="border-bottom: solid 1px rgb(44, 43, 43);" height="200" class="card-img-top" src="{{ item.image_url }}">
+        {% endif %}
         <div class="card-body">
             <h3 class="card-title">{{ item.material }} {{ item.categorie }}</h3>
             <p class="card-text">
@@ -14,7 +18,7 @@
             </p>
             <p class="card-text ">
                 Dimensions: {{ item.width }}x{{ item.length }}mm <br>
-                Price: {{ item.price }}€
+                Price: {{ item.get_price }}€
             </p>
         </div>
     </div>
