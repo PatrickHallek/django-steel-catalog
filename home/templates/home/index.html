@@ -6,12 +6,14 @@
 <div class="flex">
     {% for item in items %}
     <div class="card">
+        <img height="200" class="card-img-top" src="{{ item.image.url }}" alt="Card image cap">
         <div class="card-body">
-            <h3 class="card-title">{{ item.material }} {{ item.categorie }} {{ item.width }}x{{ item.length }}mm</h3>
+            <h3 class="card-title">{{ item.material }} {{ item.categorie }}</h3>
             <p class="card-text">
                 {{ item.description }}
             </p>
-            <p class="card-text">
+            <p class="card-text ">
+                Dimensions: {{ item.width }}x{{ item.length }}mm <br>
                 Price: {{ item.price }}€
             </p>
         </div>
