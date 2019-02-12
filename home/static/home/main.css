@@ -1,0 +1,42 @@
+.header {
+    background: rgb(34, 156, 160);
+    color: white;
+    width: 100%;
+    text-align: left;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.header>.container {
+    display: flex;
+    justify-content: space-between;
+    justify-items: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.header>.container>div>a {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+.header>.container>div>a:hover {
+    padding: 15px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.37);
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 20px;
+    margin: 20px;
+    width: 500px;
+}
